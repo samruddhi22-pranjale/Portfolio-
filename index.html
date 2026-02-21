@@ -63,7 +63,6 @@ nav ul li a:hover{
     color: rgb(170, 107, 228);
 }
 
-<style>
 .firstsection > div {
     width: 40%;
 }
@@ -107,7 +106,6 @@ nav ul li a:hover{
     color:white;
     margin-bottom:10px;
 }
-<style>
 #about {
     margin-bottom: 50px;
 }
@@ -222,6 +220,111 @@ nav ul li a:hover{
     width  : 420px;
   }
 }
+
+/* ===== CONTACT SECTION ===== */
+#contact {
+    display: flex;
+    flex-direction: column;       /* stack heading + container */
+    justify-content: center;      /* vertical centering */
+    align-items: center;          /* horizontal centering */
+    height: 100vh;                /* full viewport height */
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Contact Heading */
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Container for left + right columns */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 900px;
+    width: 100%;
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* LEFT SIDE */
+.contact-left p {
+    margin: 15px 0;
+}
+
+/* Social Icons */
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: scale(1.2);
+}
+
+/* RIGHT SIDE FORM */
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 6px;
+    border: none;
+    background: #262626;
+    color: white;
+    font-size: 16px;
+}
+
+.contact-right textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* BUTTON */
+.btn {
+    padding: 12px 25px;
+    background: #ff004f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr; /* stack columns on mobile */
+    }
+    #contact h2 {
+        font-size: 36px;
+    }
+}
+/* Footer */
+.footer{
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    margin-top: 50px;
+}
+
 </style>
 <header>
     <nav>
@@ -336,7 +439,54 @@ nav ul li a:hover{
     </div>
   </div>
 </section>
+<section id="contact">
+    <h2 class="contact-wrapper">
 
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact-container">
+
+        <!-- Left Side -->
+        <div class="contact-left">
+            <p>✉samupranjale22@gmailcom</p>
+            <p>📞9096526018</p>
+
+            <div class="social-icons">
+                <a href="#">🌐</a>
+                <a href="#">📘</a>
+                <a href="#">📷</a>
+                <a href="#">💼</a>
+            </div>
+
+            <a href="#" class="btn">Download CV</a>
+        </div>
+
+        <!-- Right Side Form -->
+        <div class="contact-right">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <p>Copyright © 2026 Samruddhi Pranjale</p>
+</footer>
+            </p>
+         </div>
+    </h3>
+</section>
+
+
+
+        </form>
+    </div>
+</section>
 </body>
 </html>
 </section>
