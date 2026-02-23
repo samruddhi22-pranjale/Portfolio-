@@ -76,7 +76,19 @@ nav ul li a:hover{
     font-size: 1.5rem;
     margin: 10px 0;
 }
-
+@media (max-width: 768px) {
+  .firstsection {
+    flex-direction: column;
+    text-align: center;
+  }
+  .leftsection {
+    width: 90%;  /* prevent overflow */
+  }
+  .rightsection img {
+    width: 80%;  /* responsive width */
+    margin: 20px 0;
+  }
+}
 .rightsection img {
     width: 500px;
     margin: 50px 0;
@@ -163,6 +175,16 @@ nav ul li a:hover{
 #skills {
     margin-bottom:100px;
 }
+@media (max-width: 768px) {
+  #about h1,
+  #about p,
+  #skills h2,
+  .skills {
+    margin-left: 20px;
+    padding-left: 10px;
+    text-align: center;
+  }
+}
  #projects {
       margin-top: 80px;
       padding: 80px 10%;
@@ -170,12 +192,14 @@ nav ul li a:hover{
       font-family: Arial, sans-serif;
     }
 
-   .section-title {
-  font-size: 32px;
-  margin-bottom: 40px;
-  text-align: left;
-  position: relative;
-  left: -50px;   /* shifts slightly left */
+#projects {
+    padding: 80px 10%;
+}
+
+#projects .section-title {
+    text-align: left;          /* align left */
+    margin-left:10px;    /* adjust for “slightly” left */
+    margin-bottom: 40px;
 }
     /* Project container using grid */
 .project-container {
@@ -223,22 +247,13 @@ nav ul li a:hover{
 
 /* ===== CONTACT SECTION ===== */
 #contact {
+    min-height: 100vh;              /* full screen height */
     display: flex;
-    flex-direction: column;       /* stack heading + container */
-    justify-content: center;      /* vertical centering */
-    align-items: center;          /* horizontal centering */
-    height: 100vh;                /* full viewport height */
-    padding: 20px;
-    color: white;
-    text-align: center;
+    flex-direction: column;
+    justify-content: center;        /* vertical center */
+    align-items: center;            /* horizontal center */
+    padding: 50px 20px;
 }
-
-/* Contact Heading */
-#contact h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-
 /* Container for left + right columns */
 .contact-container {
     display: grid;
@@ -247,11 +262,13 @@ nav ul li a:hover{
     max-width: 900px;
     width: 100%;
     background: black;
-    padding: 20px;
-    border-radius: 10px;
-    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 15px;
 }
-
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
 /* LEFT SIDE */
 .contact-left p {
     margin: 15px 0;
@@ -296,7 +313,7 @@ nav ul li a:hover{
 /* BUTTON */
 .btn {
     padding: 12px 25px;
-    background: #ff004f;
+    background:purple;
     color: white;
     border: none;
     border-radius: 6px;
@@ -312,23 +329,26 @@ nav ul li a:hover{
 @media (max-width: 768px) {
     .contact-container {
         grid-template-columns: 1fr; /* stack columns on mobile */
-    }
+    width: 90%;
+  }
     #contact h2 {
         font-size: 36px;
     }
 }
 /* Footer */
-.footer{
-    text-align: center;
-    padding: 20px;
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #111;
-    margin-top: 50px;
+    color: white;
+    height: 70px;
+    width: 100%;
 }
-
 </style>
 <header>
     <nav>
-        <div class="left">Samruddhi Portfolio</div>
+        <div class="left">Samruddhi's Portfolio</div>
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -437,19 +457,15 @@ nav ul li a:hover{
         <li>Used arrays and TimerTask for exam control</li>
       </ul>
     </div>
-  </div>
 </section>
 <section id="contact">
-    <h2 class="contact-wrapper">
-
     <h2 class="section-title">Contact Me</h2>
 
     <div class="contact-container">
 
-        <!-- Left Side -->
         <div class="contact-left">
-            <p>✉samupranjale22@gmailcom</p>
-            <p>📞9096526018</p>
+            <p>✉ samupranjale22@gmail.com</p>
+            <p>📞 9096526018</p>
 
             <div class="social-icons">
                 <a href="#">🌐</a>
@@ -458,10 +474,9 @@ nav ul li a:hover{
                 <a href="#">💼</a>
             </div>
 
-            <a href="#" class="btn">Download CV</a>
+            <a href="Samruddhi resume.pdf" download class="btn">Download CV</a>
         </div>
 
-        <!-- Right Side Form -->
         <div class="contact-right">
             <form>
                 <input type="text" placeholder="Your Name" required>
@@ -469,33 +484,12 @@ nav ul li a:hover{
                 <textarea rows="6" placeholder="Your Message"></textarea>
                 <button type="submit" class="btn">Submit</button>
             </form>
+            </div>
         </div>
-
-    </div>
 </section>
-
-<footer class="footer">
+<footer>
     <p>Copyright © 2026 Samruddhi Pranjale</p>
 </footer>
-            </p>
-         </div>
-    </h3>
-</section>
-
-
-
-        </form>
-    </div>
-</section>
-</body>
-</html>
-</section>
-</div>
-
-</div>
-</section>
-</section>
-</main>
 <script>
 const skillsSection = document.querySelector("#skills");
 const skillLevels = document.querySelectorAll(".skill-level");
